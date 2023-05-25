@@ -1,0 +1,14 @@
+category: Communication
+code: Ow
+name: Facebook
+fullname: Facebook wall posts
+description: User–user wall post
+entity-names: user
+relationship-names: wall post 
+url: http://socialnetworks.mpi-sws.org/data-wosn2009.html
+cite: viswanath09
+extr: facebook-wosn
+long-description:  The is the directed network of a small subset of posts to other user's wall on Facebook.  The nodes of the network are Facebook users, and each directed edge represents one post, linking the users writing a post to the users whose wall the post is written on.  Since users may write multiple posts on a wall, the network allows multiple edges connecting a single node pair.  Since users may write on their own wall, the network contains loops.
+tags:  #loop #incomplete
+timeiso:  2009
+
