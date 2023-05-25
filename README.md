@@ -25,11 +25,12 @@ class GDAM:
 
 After setting up a GDAM instance, there are two implementations for the network to evovle. When a fixed-size temporal network is desired, set parameter `finite_grow` in the `evo` method to be the wanted size.
 if `finite_grow` is 0, the network will keep growing ending up with the network size = `n + N`.
+The `evo` method will return a neighbor list of the corresponding aggregated network.
 ```python
 net = GDAM(5, 2, 2.2, 1., 0.7)
 nl = net.evo(N, finite_grow)
 # N           : [int] total step for the network to evovle  
-# finite_grow : [int] if `finite_grow = 0`, then the network will embrace a newly coming node every step ending up with the network size = `n + N`.
-#                      if `finite_grow > n`, then the network will not take in any newly coming node after the network size = `finite_grow`.
-# Note that `N >= finite_grow`.
+# finite_grow : [int] if `finite_grow = 0`, then the network will embrace a newly coming node every step ending up with the network size = `n + N`, e.g. net.evo(1000, 0).
+#                      if `finite_grow > n`, then the network will not take in any newly coming node after the network size = `finite_grow`, e.g. net.evo(1000, 20).
+# Note that `N >= finite_grow`. 
 ```
