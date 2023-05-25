@@ -55,7 +55,7 @@ net.plot_CCDF(np.diff(N_t))
 E_t = net.get_edge_t(0,3)
 net.plot_CCDF(np.diff(E_t))
 ```
-
+![image](https://github.com/Guyu98/Temporal-network-Generative-Dynamic-Activity-Model/blob/main/pic/activity.png)
 
 
 
