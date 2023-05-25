@@ -7,7 +7,8 @@ Users can start with loading the package
 ```python
 from model import GDAM
 ```
-
+  
+  
 
 The proposed temporal network model -- GDAM -- requires five configuration parameters that are briefly described below. In this repository, the initial network structures are set to be complete graph with `n` nodes, while it is easy to modify the source code in the `__init__()` to achieve any desired structure. Parameter `gamma` reflects the busrty activity of nodes (and links) to engage in communications, which can be obtained by fitting the real power-law interaction sequence using the algorithm proposed in [Power-Law Distributions in Empirical Data](https://doi.org/10.1137/070710111) by Clauset *et al.*. The parameters `rho` and `gam` regulate the probability of an active node to explore a new neighbor, which can be obtained by general linear regression from empirical data. Other details can be found in the paper.
 
