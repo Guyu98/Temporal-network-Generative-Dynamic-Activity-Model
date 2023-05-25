@@ -45,7 +45,16 @@ net.visualize_graph(adj)
 ```
 ![image](https://github.com/Guyu98/Temporal-network-Generative-Dynamic-Activity-Model/blob/main/pic/snapshot.png)
 
+## Get node and link activities
+To see the activity of nodes and link, one can query the active time list of any node or link by the method `get_activenode_t` or `get_edge_t` respectively. The inputs are the order of the queried node and the orders of the ending nodes of the queried link. To see the statistical features, use `plot_CCDF` to generate the complementary cumulative distributions.
 
+```python
+N_t = net.get_activenode_t(2)
+net.plot_CCDF(np.diff(N_t))
+
+E_t = net.get_edge_t(0,3)
+net.plot_CCDF(np.diff(E_t))
+```
 
 
 
