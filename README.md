@@ -22,3 +22,12 @@ class GDAM:
     # rho   : [float] the parameter that regulates the probability of an active node to create a new link according to the size of the network
     # gam   : [float] the parameter that regulates the probability of an active node to create a new link according to its own degree
 ```
+
+```python
+net = GDAM(5, 2, 2.2, 1., 0.7)
+nl = net.evo(N, finite_grow)
+# N           : [int] total step for the network to evovle  
+# finite_grow : [int] if `finite_grow = 0`, then the network will embrace a newly coming node every step ending up with the network size = `n + N`.
+                      if `finite_grow > n`, then the network will not take in any newly coming node after the network size = `finite_grow`.
+# Note that `N >= finite_grow`.
+```
