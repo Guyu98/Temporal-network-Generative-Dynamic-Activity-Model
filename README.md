@@ -23,6 +23,8 @@ class GDAM:
     # gam   : [float] the parameter that regulates the probability of an active node to create a new link according to its own degree
 ```
 
+After setting up a GDAM instance, there are two implementations for the network to evovle. When a fixed-size temporal network is desired, set parameter `finite_grow` in the `evo` method to be the wanted size.
+if `finite_grow` is 0, the network will keep growing ending up with the network size = `n + N`.
 ```python
 net = GDAM(5, 2, 2.2, 1., 0.7)
 nl = net.evo(N, finite_grow)
