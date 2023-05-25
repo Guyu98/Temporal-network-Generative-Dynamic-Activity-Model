@@ -57,6 +57,14 @@ net.plot_CCDF(np.diff(E_t))
 ```
 ![image](https://github.com/Guyu98/Temporal-network-Generative-Dynamic-Activity-Model/blob/main/pic/activity.png)
 
+## Hypothesis testing 
+To test the power-law hypothesis and goodness of fit, we follow the work below:
+
+
+A. Clauset, C.R. Shalizi, and M.E.J. Newman, "[Power-Law Distributions in Empirical Data](https://doi.org/10.1137/070710111)" SIAM Review 51(4), 661-703 (2009).
+
+
+Y. Virkar and A. Clauset, "[Power-law distributions in binned empirical data](https://arxiv.org/abs/1208.3524)". Annals of Applied Statistics 8(1), 89 - 119 (2014).
 
 
 
