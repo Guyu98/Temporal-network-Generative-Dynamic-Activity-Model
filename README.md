@@ -3,11 +3,11 @@ This repository contains implementations of the generative dynamic activity mode
 
 ![image](https://github.com/Guyu98/Temporal-network-Generative-Dynamic-Activity-Model/blob/main/pic/aggregated%20static%20network.png)
 
-Users can start with including the package
+Users can start with loading the package
 ```python
 from model import GDAM
 ```
-
+The proposed temporal network model -- GDAM -- requires five configuration parameters that are briefly described below
 ```python
 class GDAM:
     def __init__(self, n, m, gamma, rho, gam):
