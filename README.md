@@ -35,15 +35,16 @@ nl = net.evo(N, finite_grow)
 # Note that `N >= finite_grow`. 
 ```
 
-
+## Snapshots
+After setting up the temporal network, one can query any snapshot through the method `snapshot`.The `snapshot` method takes in the order of the queried snapshot ranging from 0 to `N` and returns the adjacent matrix of the snapshot. The source code saves snapshots for all time steps by default, which can make the program run slower and take up more memory when the total evo-time step `N` is longer. It is recommended to choose the appropriate snapshot storage according to specific needs. The `visualize_graph` method help to visualize any network given either its adjacent matrix or neighbor list.
 ```python
-net = GDAM(5, 2, 2.2, 1., 0.7)
-nl = net.evo(N, finite_grow)
-# N           : [int] total step for the network to evovle  
-# finite_grow : [int] if `finite_grow = 0`, then the network will embrace a newly coming node every step ending up with the network size = `n + N`, e.g. net.evo(1000, 0).
-#                      if `finite_grow > n`, then the network will not take in any newly coming node after the network size = `finite_grow`, e.g. net.evo(1000, 20).
-# Note that `N >= finite_grow`. 
+adj = net.snapshot(num)
+# num     : [int] the order of the required snapshot ranging from 0 to N, e.g. net.snapshot(65).
+net.visualize_graph(adj)
+# adj     : [nd.array] adjacent matrix or neighbor list.
 ```
+
+
 
 
 
