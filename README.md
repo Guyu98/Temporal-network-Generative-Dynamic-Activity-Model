@@ -43,7 +43,7 @@ adj = net.snapshot(num)
 net.visualize_graph(adj)
 # adj     : [nd.array] adjacent matrix or neighbor list.
 ```
-
+![image](https://github.com/Guyu98/Temporal-network-Generative-Dynamic-Activity-Model/blob/main/pic/snapshot.png)
 
 
 
